@@ -7,6 +7,9 @@ total_marks = 0
 valid_students = 0
 passed = 0
 failed =0
+student = []
+admission = []
+mark = []
 
 while True:
     if num == "":
@@ -42,6 +45,7 @@ for students in range(num):
                 print("You can only enter whole numbers between 0 and 100.")
                 score = input("Enter student\'s score: ")
             else:
+                mark.append(score)
                 break
 
     while True:
@@ -49,6 +53,7 @@ for students in range(num):
             print("Please enter student\'s amission number.")
             adm = input("Enter student\'s admission number: ")
         else:
+            admission.append(adm)
             break
 
     while True:
@@ -56,6 +61,7 @@ for students in range(num):
                 print("Please enter student\'s name.")
                 name = input("Enter student\'s name: ")
             else:
+                student.append(name)
                 break
 
     if score <= 25:
@@ -68,15 +74,6 @@ for students in range(num):
         grade = "Grade B - Good"
     else:
         grade = "Grade A - Excellent"
-
-    if highscore < score:
-        highscore = score
-        highname = name
-        highadm =  adm
-    if lowscore > score:
-        lowscore = score
-        lowname = name
-        lowadm = adm
 
     print("---STUDENT---")
     print(f"ADM NO: {adm}")
@@ -91,12 +88,27 @@ for students in range(num):
     if score > 45:
         passed  += 1
 
+highest = max(mark)
+
+print(f"The highest score is {highest}")
+for i in range(len(mark)):
+    if mark[i] == highest:
+        print(student[i])
+        print(admission[i])
+
+lowest = min(mark)
+print(f"The lowest score is {lowest}")
+
+for x in range(len(mark)):
+    if mark == lowest:
+        print(student[x])
+        print(admission[x])
+
+print(admission)
+print(student)
+print(mark)
 overal = 100 * num
 average = total_marks/valid_students
-print("\n")
-print(f"The best student is Adm: {highadm} {highname} who got a score of {highscore}")
-print(f"The least performing student is Adm: {lowadm} {lowname} who got a score of {lowscore}")
-print("\n")
 print(f"Class total score: {total_marks} out of {overal} marks.")
 print(f"Class average: {average:.2f}")
 print(f"Valid students: {valid_students}")

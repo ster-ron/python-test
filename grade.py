@@ -98,9 +98,8 @@ for i in range(len(mark)):
 
 lowest = min(mark)
 print(f"The lowest score is {lowest}")
-
 for x in range(len(mark)):
-    if mark == lowest:
+    if mark[x] == lowest:
         print(student[x])
         print(admission[x])
 

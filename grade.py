@@ -50,7 +50,7 @@ for students in range(num):
 
     while True:
         if adm == "":
-            print("Please enter student\'s amission number.")
+            print("Please enter student\'s admission number.")
             adm = input("Enter student\'s admission number: ")
         else:
             admission.append(adm)
@@ -93,19 +93,18 @@ highest = max(mark)
 print(f"The highest score is {highest}")
 for i in range(len(mark)):
     if mark[i] == highest:
-        print(student[i])
-        print(admission[i])
+        print(f"Student Name: {student[i]}")
+        print(f"Admission Number: {admission[i]}")
+        print(f"Score: {mark[i]}")
 
 lowest = min(mark)
 print(f"The lowest score is {lowest}")
 for x in range(len(mark)):
     if mark[x] == lowest:
-        print(student[x])
-        print(admission[x])
+        print(f"Student Name: {student[x]}")
+        print(f"Admission Number: {admission[x]}")
+        print(f"Score: {mark[x]}")
 
-print(admission)
-print(student)
-print(mark)
 overal = 100 * num
 average = total_marks/valid_students
 print(f"Class total score: {total_marks} out of {overal} marks.")

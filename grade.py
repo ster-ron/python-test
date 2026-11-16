@@ -88,8 +88,8 @@ for students in range(num):
     if score > 45:
         passed  += 1
 
+print("\n=====HIGHEST PERFORMING STUDENTS=====")
 highest = max(mark)
-
 print(f"The highest score is {highest}")
 for i in range(len(mark)):
     if mark[i] == highest:
@@ -97,6 +97,7 @@ for i in range(len(mark)):
         print(f"Admission Number: {admission[i]}")
         print(f"Score: {mark[i]}")
 
+print("\n=====LOWEST PERFORMING STUDENTS=====")
 lowest = min(mark)
 print(f"The lowest score is {lowest}")
 for x in range(len(mark)):

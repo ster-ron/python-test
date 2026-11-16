@@ -1,8 +1,6 @@
 print("WELCOME TO THE EXAMINATION BOARD")
 
 num = input("Enter the number of students: ").strip()
-highscore = -1
-lowscore = 101
 total_marks = 0 
 valid_students = 0
 passed = 0
